@@ -24,7 +24,6 @@
     _webView.delegate = self;
     _webView.scrollView.bounces = NO;
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.htxq.net/shop/PGoodsAction/goodsDetail.do?goodsId=df277edb-a0c6-43fb-919a-cf2a9ac7e952"]]];
-
 }
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView {
@@ -45,7 +44,6 @@
     if ([requestString hasPrefix:@"http://pos.baidu.com"]) {// ignore baidu ad
         return NO;
     }
-    
     
     NSArray *components = [requestString componentsSeparatedByString:@"::"];
     if ([components[0] isEqualToString:@"imageclick"]) {

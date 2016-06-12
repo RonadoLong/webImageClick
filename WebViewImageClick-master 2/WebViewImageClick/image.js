@@ -1,16 +1,20 @@
 //
 //  image.js
-//  Floral
 //
 //  Created by  on 16/5/7.
 //  Copyright © 2016年 ALin. All rights reserved.
 //
 
 //setImage的作用是为页面的中img元素添加onClick事件，即设置点击时调用imageClick
+function setImageClick(){
+    var imgs = document.getElementsByTagName("img");
+    for (var i=0;i<imgs.length;i++){
+        imgs[i].setAttribute("onClick","imageClick("+i+")");
+    }
+    document.location = imageurls;
+}
 
-
-window.onload(getAllImageUrl())
-
+//window.onload(getAllImageUrl())
 
 //image click load urlimage
 function imageClick(i){
